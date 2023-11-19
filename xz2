@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a[10]={13,16,17,18,16,14,15,12,21,26};
+	int i,j,t;
+	for (i=0;i<9;i++)
+		for (j=0;j<9-i;j++)
+		{ if (a[j]<a[j+1])
+			{   t=a[j+1];
+			 	a[j+1]=a[j];
+				a[j]=t; 
+			}
+			
+		} 
+		for (i=0;i<=9;i++)
+			cout<<a[i]<<'\t';
+			cout<<endl;
+
+
+     return 0;
+}
