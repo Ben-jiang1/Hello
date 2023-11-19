@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a[10]={1,0,5,2,3,4,7,9,8,6},min,t,i,j,m;
+	
+//for (i=0;i<=9;i++)
+	//cin>>a[i];
+		
+	for (j=0;j<=8;j++)
+	{
+		for (i=j+1;i<=9;i++)
+		{	if (a[i]<=a[j]) 
+				{   min=a[i];
+					a[i]=a[j];
+					a[j]=min;	
+				}		
+		}					
+	} 
+	for (int i=0;i<=9;i++)
+		cout<<a[i]<<"\t";
+	
+	return 0;
+}
